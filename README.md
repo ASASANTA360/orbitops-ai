@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OrbitOps AI
 
-## Getting Started
+AI-powered DevOps and Security Assistant built for the GitLab Transcend Hackathon.
 
-First, run the development server:
+## Overview
+
+OrbitOps AI helps developers analyze repositories and generate actionable DevOps and security recommendations using GitLab Orbit-style repository context.
+
+The project demonstrates how AI-native workflows can improve repository quality, CI/CD practices, and developer productivity.
+
+## Features
+
+* Repository analysis
+* Security findings
+* DevOps recommendations
+* AI-generated reports
+* JSON export
+* GitLab Orbit context integration
+* Clean dashboard UI
+
+## Pages
+
+* Home
+* Analyze Repository
+* Reports
+
+## Tech Stack
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* GitLab Orbit
+* AI-driven repository analysis
+
+## Example Findings
+
+* Dependency vulnerabilities
+* Missing CI/CD checks
+* Documentation gaps
+* Test coverage improvements
+
+## Example Recommendations
+
+* Enable security scanning
+* Improve pipeline quality
+* Strengthen repository structure
+* Publish reusable GitLab skills
+
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Hackathon
 
-## Learn More
+GitLab Transcend Hackathon 2026
 
-To learn more about Next.js, take a look at the following resources:
+Track:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Showcase Track
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
