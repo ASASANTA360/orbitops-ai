@@ -4,10 +4,13 @@ import { useState } from "react";
 
 type AnalysisResult = {
   repo: string;
+  projectName?: string;
+  projectType?: string;
   score: number;
   riskLevel: string;
   findings: string[];
   recommendations: string[];
+  aiSummary?: string;
 };
 
 export default function AnalyzePage() {
@@ -28,7 +31,22 @@ export default function AnalyzePage() {
 
     const data = await res.json();
 
-    setResult(data);
+    if (!res.ok || data.error) {
+      setResult({
+        repo: repoUrl,
+        score: 0,
+        riskLevel: "Error",
+        findings: [data.error || "GitLab analysis failed. Please try again."],
+        recommendations: [
+          "Check your internet connection.",
+          "Confirm the GitLab repo URL is correct.",
+          "Try again after a few seconds.",
+        ],
+      });
+    } else {
+      setResult(data);
+    }
+
     setLoading(false);
   }
 
@@ -98,6 +116,15 @@ export default function AnalyzePage() {
                   ))}
                 </ul>
               </div>
+                 {result.aiSummary && (
+             <div className="mt-8 rounded-xl bg-slate-800 p-6">
+             <h3 className="text-xl font-bold mb-4">AI Summary</h3>
+           <p className="whitespace-pre-wrap text-slate-300 leading-7">
+                 {result.aiSummary}
+          </p>
+        </div>
+)}
+
             </div>
           </div>
         )}
